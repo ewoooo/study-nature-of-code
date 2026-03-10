@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    font-family: system-ui, sans-serif;
+    font-family: "geist", system-ui, sans-serif;
     background: #1a1a1a;
     color: #e0e0e0;
     min-height: 100vh;
@@ -19,35 +19,69 @@ header h1 {
     font-weight: 400;
     letter-spacing: 0.05em;
 }
+
+button {
+    font-family: "geist mono";
+    text-transform: uppercase;
+}
+
 /* List view */
 #sketch-list {
     max-width: 640px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
+#sketch-list h3 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #888;
+    margin: 1.5rem 0 0.5rem;
+}
+#sketch-list h3:first-child {
+    margin-top: 0;
+}
 #sketch-list a {
-    display: block;
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
     padding: 0.8rem 1rem;
     margin-bottom: 0.5rem;
     background: #252525;
     border-radius: 6px;
     color: #e0e0e0;
     text-decoration: none;
-    transition: background 0.15s;
+    transition:
+        background 150ms ease-out,
+        transform 150ms ease-out;
 }
 #sketch-list a:hover {
     background: #333;
+    outline: 1px solid #555;
+    transform: scale(1.01);
+}
+#sketch-list .sketch-desc {
+    font-size: 0.8rem;
+    color: #777;
 }
 #sketch-list .empty {
     text-align: center;
     color: #666;
     padding: 3rem 0;
 }
+#list-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1rem auto 2rem;
+    flex-direction: column;
+}
 #add-btn {
     display: block;
-    width: 48px;
-    height: 48px;
-    margin: 1rem auto 2rem;
+    width: 64px;
+    height: 64px;
     background: #252525;
     border: 1px dashed #555;
     border-radius: 50%;
@@ -61,6 +95,93 @@ header h1 {
 #add-btn:hover {
     background: #333;
     color: #e0e0e0;
+}
+#edit-btn {
+    padding: 0.2rem 0.8rem;
+    background: #252525;
+    border: 1px solid #555;
+    border-radius: 4px;
+    color: #888;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition:
+        background 0.15s,
+        color 0.15s;
+}
+#edit-btn:hover {
+    background: #333;
+    color: #e0e0e0;
+}
+/* Edit mode */
+.edit-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.5rem;
+    background: #252525;
+    border-radius: 6px;
+}
+.edit-row input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #555;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    padding: 0.2rem 0.3rem;
+    outline: none;
+    font-family: inherit;
+}
+.edit-row input:focus {
+    border-bottom-color: #aaa;
+}
+.edit-row input.edit-title {
+    width: 120px;
+    flex-shrink: 0;
+}
+.edit-row input.edit-desc {
+    flex: 1;
+    min-width: 0;
+}
+.edit-row select {
+    background: #333;
+    border: 1px solid #555;
+    border-radius: 4px;
+    color: #ccc;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.4rem;
+    outline: none;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.edit-actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+.edit-actions button {
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+.edit-actions .save-btn {
+    background: #2a6;
+    color: #fff;
+    border-color: #2a6;
+}
+.edit-actions .save-btn:hover {
+    background: #3b7;
+}
+.edit-actions .cancel-btn {
+    background: #333;
+    color: #ccc;
+}
+.edit-actions .cancel-btn:hover {
+    background: #444;
 }
 /* Canvas view */
 #sketch-view {

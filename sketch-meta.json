@@ -1,0 +1,68 @@
+{
+    "Random Walks": [
+        {
+            "file": "random-walker-classic",
+            "title": "Tranditional Walker",
+            "desc": "4방향 랜덤 워커"
+        },
+        {
+            "file": "random-walker",
+            "title": "8-Direction Walker",
+            "desc": "8방향 랜덤 워커"
+        }
+    ],
+    "Random Number Distribution": [
+        {
+            "file": "pseudo-random-graph",
+            "title": "Graph",
+            "desc": "의사난수 분포 그래프"
+        }
+    ],
+    "Nonuniform Distribution": [
+        {
+            "file": "random-walker-biased",
+            "title": "Biased Walker",
+            "desc": "특정 방향 편향 랜덤 워커"
+        },
+        {
+            "file": "random-walker-chase",
+            "title": "Chase",
+            "desc": "마우스 추적 워커"
+        }
+    ],
+    "Normal Distribution": [
+        {
+            "file": "gaussian-random-graph",
+            "title": "Graph",
+            "desc": "정규분포 그래프"
+        },
+        {
+            "file": "gaussian-random-circle",
+            "title": "Circle",
+            "desc": "정규분포 원 시각화"
+        },
+        {
+            "file": "gaussian-random-splitter",
+            "title": "Splitter",
+            "desc": "정규분포 분리"
+        },
+        {
+            "file": "gaussian-random-walker",
+            "title": "Gaussian Walker",
+            "desc": "정규분포 워커"
+        }
+    ],
+    "Accept-Reject Distribution": [
+        {
+            "file": "accept-reject-graph",
+            "title": "Graph",
+            "desc": "수락-거부 그래프"
+        },
+        {
+            "file": "accept-reject-walker",
+            "title": "Accept-Reject Walker",
+            "desc": "수락-거부 워커"
+        }
+    ],
+    "Uncategorized": []
+}
