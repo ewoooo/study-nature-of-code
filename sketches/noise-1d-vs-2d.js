@@ -38,7 +38,7 @@ export default function sketch(p) {
         p.noFill();
         p.beginShape();
         for (let x = 0; x < CANVAS; x++) {
-            let y = p.noise(x * step.value) * THIRD;
+            let y = p.noise(x * step.value + t) * THIRD;
             p.vertex(x, y);
         }
         p.endShape();
@@ -52,7 +52,8 @@ export default function sketch(p) {
         p.noFill();
         p.beginShape();
         for (let x = 0; x < CANVAS; x++) {
-            let y = p.noise(x * step.value, t * speed.value) * THIRD + THIRD;
+            let y =
+                p.noise(x * step.value + t, t * speed.value) * THIRD + THIRD;
             p.vertex(x, y);
         }
         p.endShape();
@@ -67,7 +68,7 @@ export default function sketch(p) {
         p.beginShape();
         for (let x = 0; x < CANVAS; x++) {
             let y =
-                p.noise(x * step.value, t * speed.value, t * speed.value) *
+                p.noise(x * step.value + t, t * speed.value, t * speed.value) *
                     THIRD +
                 THIRD * 2;
             p.vertex(x, y);

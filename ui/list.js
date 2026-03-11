@@ -8,7 +8,14 @@ function escapeAttr(str) {
         .replace(/>/g, "&gt;");
 }
 
-export function renderList({ meta, sketchNames, editMode, listEl, onSave, onCancel }) {
+export function renderList({
+    meta,
+    sketchNames,
+    editMode,
+    listEl,
+    onSave,
+    onCancel,
+}) {
     const categorized = new Set(allSketchFiles(meta));
     const uncategorized = sketchNames.filter((s) => !categorized.has(s.file));
     const flat = flattenMeta(meta);

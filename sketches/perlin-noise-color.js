@@ -39,7 +39,7 @@ export default function sketch(p) {
         }
         p.updatePixels();
         t += inc;
-
+        p.noLoop();
         p.noiseDetail(octave.value, falloff.value);
     };
 }
