@@ -1,9 +1,9 @@
 export default function sketch(p) {
     // Basic Configuration
     const CANVAS_SIZE = 600;
-    const FRAME_RATE = 120;
+    const FRAME_RATE = 60;
     const BACKGROUND_COLOR = 0;
-    const COUNT = 20;
+    const COUNT = 10;
 
     // array
     const entry = Array(COUNT).fill(0);
@@ -15,7 +15,6 @@ export default function sketch(p) {
     };
     p.draw = () => {
         const index = Math.floor(sampling() * COUNT);
-        console.log(index);
         entry[index]++;
 
         const barWidth = p.width / COUNT;
@@ -29,7 +28,7 @@ export default function sketch(p) {
     function sampling() {
         while (true) {
             let r1 = p.random(1);
-            let k = 1 - r1;
+            let k = r1 ** 2;
             let r2 = p.random(1);
             if (r2 < k) {
                 return r1;
