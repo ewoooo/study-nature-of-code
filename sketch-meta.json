@@ -94,5 +94,17 @@
             "title": "Trig Circle",
             "desc": "피타고라스 항등식 설명"
         }
+    ],
+    "Uncategorized": [
+        {
+            "file": "perline-noise-dot",
+            "title": "perline noise dot",
+            "desc": ""
+        },
+        {
+            "file": "perline-noise-dynamic-height",
+            "title": "perline noise dynamic height",
+            "desc": ""
+        }
     ]
 }

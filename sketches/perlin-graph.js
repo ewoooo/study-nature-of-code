@@ -25,16 +25,13 @@ export default function sketch(p) {
         p.stroke("white");
         p.noFill();
 
-        offset = s;
-
-        const cy = p.noise(offset + step.value * 300) * p.height;
+        const cy = p.noise(s + step.value * 300) * p.height;
         p.circle(p.width / 2, cy, 10);
 
         p.beginShape();
         for (let x = 0; x < p.width; x++) {
-            const y = p.noise(offset) * p.height;
+            const y = p.noise(x * step.value + s) * p.height;
             p.vertex(x, y);
-            offset += step.value;
         }
         p.endShape();
 

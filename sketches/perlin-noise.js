@@ -31,6 +31,6 @@ export default function sketch(p) {
             yOff += inc;
         }
         p.updatePixels();
-        p.noiseDetail(octave.value);
+        p.noiseDetail(octave.value,);
     };
 }
