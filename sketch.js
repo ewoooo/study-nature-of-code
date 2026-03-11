@@ -1,4 +1,5 @@
 import p5 from "p5";
+import { clearSliders } from "/ui/sliders.js";
 
 const modules = import.meta.glob("./sketches/*.js");
 
@@ -154,6 +155,7 @@ async function loadSketch(name) {
         currentP5 = null;
     }
     canvasContainer.innerHTML = "";
+    clearSliders();
 
     const mod = await modules[entry.path]();
     const sketchFn = mod.default;
@@ -171,6 +173,7 @@ function showList() {
         currentP5 = null;
     }
     canvasContainer.innerHTML = "";
+    clearSliders();
     sketchView.style.display = "none";
     listView.style.display = "block";
     document.title = "Nature of Code — p5.js Sketches";

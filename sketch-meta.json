@@ -64,5 +64,16 @@
             "desc": "수락-거부 워커"
         }
     ],
-    "Uncategorized": []
+    "ETC": [
+        {
+            "file": "slider-test",
+            "title": "Slider Test",
+            "desc": "슬라이더 기능 추가 데모"
+        },
+        {
+            "file": "trig-circle",
+            "title": "Trig Circle",
+            "desc": "피타고라스 항등식 설명"
+        }
+    ]
 }
