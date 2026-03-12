@@ -31,11 +31,14 @@ button {
     flex: 1;
     padding: 32px 16px;
     max-width: 640px;
+    justify-content: center;
+    align-items: center;
 }
 
 .header {
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: 500;
+    letter-spacing: 0px;
     text-align: left;
 }
 
@@ -66,6 +69,8 @@ button {
     border-radius: 6px;
     color: #e0e0e0;
     text-decoration: none;
+    text-transform: none;
+    letter-spacing: normal;
     transition:
         background 150ms ease-out,
         transform 150ms ease-out;

@@ -65,13 +65,17 @@ export function renderList({
                 html += `<h2>${group.section}</h2>`;
                 lastSection = group.section;
             }
-            html += `<h3>${group.category}</h3>`;
-            html += group.sketches
-                .map(
-                    ({ file, title, desc }) =>
-                        `<a href="#${file}"><span class="sketch-title">${title}</span><span class="sketch-desc">${desc}</span></a>`,
-                )
-                .join("");
+            // Keep the category header as the parent element for its links
+            // (matches the DOM order change captured in the browser preview).
+            html +=
+                `<h3>${group.category}` +
+                group.sketches
+                    .map(
+                        ({ file, title, desc }) =>
+                            `<a href="#${file}"><span class="sketch-title">${title}</span><span class="sketch-desc">${desc}</span></a>`,
+                    )
+                    .join("") +
+                `</h3>`;
         }
 
         if (uncategorized.length > 0) {

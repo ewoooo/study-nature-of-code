@@ -81,6 +81,21 @@
             "file": "perlin-noise-color",
             "title": "Color Noise",
             "desc": "컬러 펄린 노이즈 맵"
+        },
+        {
+            "file": "perline-noise-dot",
+            "title": "perline noise dot",
+            "desc": ""
+        },
+        {
+            "file": "perline-noise-dynamic-height",
+            "title": "Circle Dynamic Height",
+            "desc": "동적 높이 원"
+        },
+        {
+            "file": "perlin-noise-comparison",
+            "title": "Noise Comparison",
+            "desc": "펄린 노이즈 비교"
         }
     ],
     "ETC": [
@@ -93,18 +108,6 @@
             "file": "trig-circle",
             "title": "Trig Circle",
             "desc": "피타고라스 항등식 설명"
-        }
-    ],
-    "Uncategorized": [
-        {
-            "file": "perline-noise-dot",
-            "title": "perline noise dot",
-            "desc": ""
-        },
-        {
-            "file": "perline-noise-dynamic-height",
-            "title": "perline noise dynamic height",
-            "desc": ""
         }
     ]
 }
