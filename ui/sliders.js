@@ -1,15 +1,35 @@
 const sliders = new Map();
 let container = null;
+let activationFrame = null;
 
 function getContainer() {
     if (container) return container;
+
     container = document.getElementById("slider-container");
+
     if (!container) {
         container = document.createElement("div");
         container.id = "slider-container";
         document.getElementById("sketch-view").appendChild(container);
     }
+
     return container;
+}
+
+function setContainerActive(isActive) {
+    getContainer().classList.toggle("isActive", isActive);
+    return container;
+}
+
+function scheduleContainerActivation() {
+    if (activationFrame !== null) cancelAnimationFrame(activationFrame);
+
+    activationFrame = requestAnimationFrame(() => {
+        activationFrame = requestAnimationFrame(() => {
+            setContainerActive(true);
+            activationFrame = null;
+        });
+    });
 }
 
 /**
@@ -50,6 +70,7 @@ export function slider(label, defaultValue, min, max, step = 0.01) {
 
     wrap.append(labelEl, input, valueEl);
     getContainer().append(wrap);
+    scheduleContainerActivation();
 
     sliders.set(label, state);
     return state;
@@ -58,5 +79,14 @@ export function slider(label, defaultValue, min, max, step = 0.01) {
 /** 스케치 전환 시 슬라이더를 모두 제거합니다. */
 export function clearSliders() {
     sliders.clear();
-    if (container) container.innerHTML = "";
+
+    if (activationFrame !== null) {
+        cancelAnimationFrame(activationFrame);
+        activationFrame = null;
+    }
+
+    if (container) {
+        setContainerActive(false);
+        container.innerHTML = "";
+    }
 }
