@@ -96,6 +96,11 @@
             "file": "perlin-noise-comparison",
             "title": "Noise Comparison",
             "desc": "펄린 노이즈 비교"
+        },
+        {
+            "file": "perlin-noise-set-comparison",
+            "title": "Set vs Noise 비교",
+            "desc": "noise 이동 vs 그리기 위치 이동 비교"
         }
     ],
     "ETC": [
@@ -108,6 +113,28 @@
             "file": "trig-circle",
             "title": "Trig Circle",
             "desc": "피타고라스 항등식 설명"
+        }
+    ],
+    "Uncategorized": [
+        {
+            "file": "box-cutter",
+            "title": "box cutter",
+            "desc": ""
+        },
+        {
+            "file": "perlin-noise-color-brightness",
+            "title": "perlin noise color brightness",
+            "desc": ""
+        },
+        {
+            "file": "perlin-noise-3d",
+            "title": "perlin noise 3d",
+            "desc": ""
+        },
+        {
+            "file": "perlin-noise-flow",
+            "title": "perlin noise flow",
+            "desc": ""
         }
     ]
 }

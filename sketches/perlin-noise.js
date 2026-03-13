@@ -1,10 +1,11 @@
 import { slider } from "../ui/sliders";
 
 export default function sketch(p) {
-    const CANVAS_SIZE = 600;
+    const CANVAS_SIZE = 200;
     const FRAME_RATE = 30;
     const BACKGROUND_COLOR = 0;
 
+    let t = 0;
     let inc = 0.01;
     let octave;
     p.setup = () => {
@@ -15,7 +16,7 @@ export default function sketch(p) {
         octave = slider("octave", 4, 1, 32, 1);
     };
     p.draw = () => {
-        let yOff = 0;
+        let yOff = t;
         p.loadPixels();
         for (let y = 0; y < p.height; y++) {
             let xOff = 0;
@@ -32,5 +33,7 @@ export default function sketch(p) {
         }
         p.updatePixels();
         p.noiseDetail(octave.value);
+
+        t += inc;
     };
 }
