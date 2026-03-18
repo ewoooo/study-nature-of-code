@@ -3,7 +3,7 @@
         "Random Walks": [
             {
                 "file": "random-walker-classic",
-                "title": "Tranditional Walker",
+                "title": "Traditional Walker",
                 "desc": "4방향 랜덤 워커"
             },
             {
@@ -64,6 +64,13 @@
                 "title": "Accept-Reject Walker",
                 "desc": "수락-거부 워커"
             }
+        ],
+        "Capstone": [
+            {
+                "file": "random-capstone-environment",
+                "title": "Capstone Environment",
+                "desc": "랜덤 단원 종합 프로젝트"
+            }
         ]
     },
     "Perlin Noise": [
@@ -74,7 +81,7 @@
         },
         {
             "file": "perlin-noise",
-            "title": "Noise",
+            "title": "Noise Map",
             "desc": "펄린 노이즈 맵"
         },
         {
@@ -83,14 +90,19 @@
             "desc": "컬러 펄린 노이즈 맵"
         },
         {
-            "file": "perline-noise-dot",
-            "title": "perline noise dot",
-            "desc": ""
+            "file": "perlin-noise-color-brightness",
+            "title": "Color Brightness",
+            "desc": "펄린 노이즈 색상 밝기 시각화"
         },
         {
-            "file": "perline-noise-dynamic-height",
-            "title": "Circle Dynamic Height",
-            "desc": "동적 높이 원"
+            "file": "perlin-noise-dot",
+            "title": "Noise Dot",
+            "desc": "펄린 노이즈 점 시각화"
+        },
+        {
+            "file": "perlin-noise-dynamic-height",
+            "title": "Dynamic Height",
+            "desc": "펄린 노이즈 동적 높이 시각화"
         },
         {
             "file": "perlin-noise-comparison",
@@ -99,8 +111,23 @@
         },
         {
             "file": "perlin-noise-set-comparison",
-            "title": "Set vs Noise 비교",
+            "title": "Set vs Noise",
             "desc": "noise 이동 vs 그리기 위치 이동 비교"
+        },
+        {
+            "file": "perlin-noise-3d",
+            "title": "3D Terrain",
+            "desc": "펄린 노이즈 3D 지형 시각화"
+        },
+        {
+            "file": "perlin-noise-flow",
+            "title": "Flow Field",
+            "desc": "펄린 노이즈 플로우 필드"
+        },
+        {
+            "file": "random-walker-perlin",
+            "title": "Perlin Walker",
+            "desc": "펄린 노이즈 기반 워커"
         }
     ],
     "ETC": [
@@ -113,28 +140,11 @@
             "file": "trig-circle",
             "title": "Trig Circle",
             "desc": "피타고라스 항등식 설명"
-        }
-    ],
-    "Uncategorized": [
+        },
         {
             "file": "box-cutter",
-            "title": "box cutter",
-            "desc": ""
-        },
-        {
-            "file": "perlin-noise-color-brightness",
-            "title": "perlin noise color brightness",
-            "desc": ""
-        },
-        {
-            "file": "perlin-noise-3d",
-            "title": "perlin noise 3d",
-            "desc": ""
-        },
-        {
-            "file": "perlin-noise-flow",
-            "title": "perlin noise flow",
-            "desc": ""
+            "title": "Box Cutter",
+            "desc": "박스 커터 시각화"
         }
     ]
 }

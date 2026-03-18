@@ -65,28 +65,31 @@ export function renderList({
                 html += `<h2>${group.section}</h2>`;
                 lastSection = group.section;
             }
-            // Keep the category header as the parent element for its links
-            // (matches the DOM order change captured in the browser preview).
-            html +=
-                `<h3>${group.category}` +
-                group.sketches
-                    .map(
-                        ({ file, title, desc }) =>
-                            `<a href="#${file}"><span class="sketch-title">${title}</span><span class="sketch-desc">${desc}</span></a>`,
-                    )
-                    .join("") +
-                `</h3>`;
+            html += `<h3>${group.category}</h3>`;
+            html += `<div class="card-grid">`;
+            html += group.sketches
+                .map(
+                    ({ file, title, desc }) =>
+                        `<a href="#${file}" class="card">` +
+                        `<span class="card-title">${title}</span>` +
+                        `<span class="card-desc">${desc}</span>` +
+                        `</a>`,
+                )
+                .join("");
+            html += `</div>`;
         }
 
         if (uncategorized.length > 0) {
-            html +=
-                `<h3>Uncategorized</h3>` +
-                uncategorized
-                    .map(
-                        ({ file }) =>
-                            `<a href="#${file}"><span class="sketch-title">${file.replace(/-/g, " ")}</span></a>`,
-                    )
-                    .join("");
+            html += `<h3>Uncategorized</h3><div class="card-grid">`;
+            html += uncategorized
+                .map(
+                    ({ file }) =>
+                        `<a href="#${file}" class="card">` +
+                        `<span class="card-title">${file.replace(/-/g, " ")}</span>` +
+                        `</a>`,
+                )
+                .join("");
+            html += `</div>`;
         }
 
         listEl.innerHTML = html;
