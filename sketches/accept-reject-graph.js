@@ -28,7 +28,7 @@ export default function sketch(p) {
     function sampling() {
         while (true) {
             let r1 = p.random(1);
-            let k = r1 ** 2;
+            let k = 1 - r1 / 20;
             let r2 = p.random(1);
             if (r2 < k) {
                 return r1;

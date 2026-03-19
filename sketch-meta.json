@@ -146,5 +146,12 @@
             "title": "Box Cutter",
             "desc": "박스 커터 시각화"
         }
+    ],
+    "Uncategorized": [
+        {
+            "file": "basic-line-control",
+            "title": "basic line control",
+            "desc": ""
+        }
     ]
 }
