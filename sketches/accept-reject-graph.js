@@ -3,7 +3,7 @@ export default function sketch(p) {
     const CANVAS_SIZE = 600;
     const FRAME_RATE = 60;
     const BACKGROUND_COLOR = 0;
-    const COUNT = 10;
+    const COUNT = 20;
 
     // array
     const entry = Array(COUNT).fill(0);
@@ -14,8 +14,10 @@ export default function sketch(p) {
         p.background(BACKGROUND_COLOR);
     };
     p.draw = () => {
-        const index = Math.floor(sampling() * COUNT);
-        entry[index]++;
+        for (let s = 0; s < 5; s++) {
+            const index = Math.floor(sampling() * COUNT);
+            if (index < COUNT) entry[index]++;
+        }
 
         const barWidth = p.width / COUNT;
 
@@ -28,10 +30,10 @@ export default function sketch(p) {
     function sampling() {
         while (true) {
             let r1 = p.random(1);
-            let k = 1 - r1 / 20;
+            let k = r1;
             let r2 = p.random(1);
             if (r2 < k) {
-                return r1;
+                return r2;
             }
         }
     }

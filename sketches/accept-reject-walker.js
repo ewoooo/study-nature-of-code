@@ -23,9 +23,9 @@ export default function sketch(p) {
 
         stepSize(d) {
             while (true) {
-                const r1 = p.random(0, d);
-                const r2 = p.random(0, 1);
-                const k = 1 - r1 / d;
+                const r1 = p.random(1, d);
+                const r2 = p.random(1);
+                const k = 1 / (r1 * r1);
                 if (r2 < k) return r1;
             }
         }
